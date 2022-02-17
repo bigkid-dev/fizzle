@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0c7ff73f65.js" crossorigin="anonymous"></script>
+    <title>
+        Fizzle Music Page
+    </title>
+    <link href="${pageContext.request.contextPath}/resources/static/css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #f1f5f9;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background-color: #000;
+}
+nav {
+  padding: 10px;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+nav > * {
+  margin-right: 20px;
+}
+.search__input {
+  outline: none;
+  border: none;
+  height: 5vh;
+  padding: 5px;
+  font-size: 10px;
+  width: 100%;
+  color: black;
+}
+.search__bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.social__icons {
+  display: flex;
+  align-items: center;
+}
+main {
+  width: 100%;
+}
+.exclusive__section {
+  display: flex;
+  float: right;
+  clear: both;
+  padding-right: 10px;
+}
+.exclusive__btn,
+.events__btn {
+  margin-top: 20px;
+  background-color: rgb(29, 28, 28);
+  padding: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.exclusive__btn:hover,
+.events__btn:hover {
+  background-color: #f1f5f9;
+  color: #000;
+}
+.events__btn {
+  margin: 20px;
+}
+section {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 10px;
+  background: url("./p.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.playlists {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.playlist__items {
+  padding: 10px;
+  width: 40%;
+  height: 150px;
+  background-color: rgb(27, 26, 26);
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.playlist__items > * {
+  width: 30%;
+}
+.artiste__image {
+  width: 30%;
+  height: 100%;
+  background-image: url("https://cdn.cnn.com/cnnnext/dam/assets/191001102911-burna-boy-at-coachella-2019.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.artiste__details,
+.artiste__purchase {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.playButton,
+.menuButton,
+.shopButton {
+  margin-top: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+.event__list {
+  padding: 30px;
+}
+.events {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(20, 20, 20);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.calendar {
+  width: max-content;
+  padding: 10px;
+  height: 100%;
+  background-color: rgb(46, 45, 45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+@media screen and (max-width: 999px) {
+  .playlists {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .playlist__items {
+    width: 100%;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+<nav>
+    <h3 class="logo">FIZZLE</h3>
+
+    <div class="social__icons">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="playButton">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </div>
+</nav>
+<main>
+    <section>
+        <div class="col-25 col-md-25 col-sm-4">
+            <center>
+            <img src="https://cdn.cnn.com/cnnnext/dam/assets/191001102911-burna-boy-at-coachella-2019.jpg" width="1100", height="400" alt="centered image"></img>
+            </center>
+        </div>
+    </section>
+    <div>
+
+    </div>
+    <div class="exclusive__section">
+        <button class="exclusive__btn"> Exclusive music</button>
+    </div>
+    <div class="playlists">
+        <div class="playlist__items">
+            <div class="artiste__image">
+            </div>
+
+            <div class="artiste__details">
+                <a href="http://localhost:8080/ArtistPage">
+                <h3>Odogwu</h3>
+                <p>Burna Boy
+                </a>
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="playButton">
+
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+
+            </div>
+
+            <div class="artiste__purchase">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menuButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="shopButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+
+            </div>
+            <audio controls  controlsList ="nodownload">
+                <source  src = "https://fizzle.sfo3.cdn.digitaloceanspaces.com/Swingy3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="playlist__items">
+            <div class="artiste__image">
+            </div>
+
+            <div class="artiste__details">
+                <a href="http://localhost:8080/ArtistPage">
+                <h3>Odogwu</h3>
+                <p>Burna Boy
+                </p>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="playButton" >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+                </svg>
+            </div>
+
+            <div class="artiste__purchase">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menuButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="shopButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <audio controls  controlsList ="nodownload">
+                <source  src = "https://fizzle.sfo3.cdn.digitaloceanspaces.com/trap%20house3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="playlist__items">
+            <div class="artiste__image">
+            </div>
+
+            <div class="artiste__details">
+                <a href="http://localhost:8080/ArtistPage">
+                <h3>Odogwu</h3>
+                <p>Burna Boy
+                </p>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="playButton" href ="http://localhost:8080/">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+                </svg>
+            </div>
+
+            <div class="artiste__purchase">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menuButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="shopButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+
+            </div>
+            <audio controls  controlsList ="nodownload">
+                <source  src = "https://fizzle.sfo3.cdn.digitaloceanspaces.com/drill.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="playlist__items">
+            <div class="artiste__image">
+            </div>
+
+            <div class="artiste__details">
+                <a href="http://localhost:8080/ArtistPage">
+                <h3>Odogwu</h3>
+                <p>Burna Boy
+                </p>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="playButton">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+
+            </div>
+
+            <div class="artiste__purchase">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="menuButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="shopButton">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+
+            </div>
+            <audio controls controlsList ="nodownload">
+                <source  src = "https://fizzle.sfo3.cdn.digitaloceanspaces.com/untitled.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+    </div>
+
+    <div class="events__section">
+        <button class="events__btn"> Upcoming Events</button>
+        <div class="event__list">
+            <div class="events">
+                <div class="calendar">
+                    <p> Feb. 28</p>
+                </div>
+                <p>Jonny Drille Concert </p>
+            </div>
+            <div class="events">
+                <div class="calendar">
+                    <p> Feb. 28</p>
+                </div>
+                <p>Jonny Drille Concert </p>
+            </div>
+            <div class="events">
+                <div class="calendar">
+                    <p> Feb. 28</p>
+                </div>
+                <p>Jonny Drille Concert </p>
+            </div>
+            <div class="events">
+                <div class="calendar">
+                    <p> Feb. 28</p>
+                </div>
+                <p>Jonny Drille Concert </p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

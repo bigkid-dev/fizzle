@@ -1,0 +1,25 @@
+/**@param
+ * Order class is a model for the paypal payment integrations
+ * all parameters declared in this class interacts with paypal Api
+  **/
+
+package com.example.demo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class Order {
+
+    private double price;
+    private String currency;
+    private String method;
+    private String intent;
+    private String description;
+
+}
